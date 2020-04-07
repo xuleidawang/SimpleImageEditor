@@ -52,7 +52,14 @@ void Image::AddNoise (double factor)
 
 void Image::Brighten (double factor)
 {
+    if (factor < 0.0) factor = 0.0;
   /* Your Work Here  (section 3.2.1 of assignment)*/
+    for (int i = 0; i < num_pixels; i++)
+    {
+        this->pixels[i].r = ComponentLerp(this->pixels[i].r, Component(0.0), 1.0 - factor);
+        this->pixels[i].g = ComponentLerp(this->pixels[i].g, Component(0.0), 1.0 - factor);
+        this->pixels[i].b = ComponentLerp(this->pixels[i].b, Component(0.0), 1.0 - factor);
+    }
 }
 
 

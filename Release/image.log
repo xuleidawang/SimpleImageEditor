@@ -1,2 +1,5 @@
 ﻿  image.cpp
+E:\Lei Xu\Documents\GitHub\SimpleImageEditor\Source\image.cpp(81,43): warning C4244: 'argument': conversion from 'double' to 'Component', possible loss of data
+E:\Lei Xu\Documents\GitHub\SimpleImageEditor\Source\image.cpp(82,43): warning C4244: 'argument': conversion from 'double' to 'Component', possible loss of data
+E:\Lei Xu\Documents\GitHub\SimpleImageEditor\Source\image.cpp(83,43): warning C4244: 'argument': conversion from 'double' to 'Component', possible loss of data
   image.vcxproj -> E:\Lei Xu\Documents\GitHub\SimpleImageEditor\.\Release\image.exe

@@ -66,6 +66,22 @@ void Image::Brighten (double factor)
 void Image::ChangeContrast (double factor)
 {
   /* Your Work Here (section 3.2.2) */
+    Image* grayScale = new Image(this->width, this->height);
+    double avg = 0.0;
+    for (int i = 0; i < num_pixels; i++)
+    {
+        avg += this->pixels[i].Luminance();
+    }
+
+    avg /= (double)num_pixels;
+    for (int i = 0; i < num_pixels; i++)
+    {
+        //grayScale->pixels[i] = (this->pixels[i].r + this->pixels[i].g + this->pixels[i].b) / 3.0;
+
+        this->pixels[i].r = ComponentLerp(avg, this->pixels[i].r, factor);
+        this->pixels[i].g = ComponentLerp(avg, this->pixels[i].g, factor);
+        this->pixels[i].b = ComponentLerp(avg, this->pixels[i].b, factor);
+    }
 }
 
 
